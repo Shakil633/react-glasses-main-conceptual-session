@@ -1,14 +1,11 @@
+import { Link } from "react-router-dom";
+
 const NotFound = () => {
     return (
         <div className='text-center'>
-            <h1 className='text-[400px] font-bold'>
-                404
-            </h1>
+        <img className="w-full h-screen" src="https://webartdevelopers.com/blog/wp-content/uploads/2021/05/404-error-page-svg-animation.gif" alt="" />
 
-            <h2 className='text-5xl font-bold'>
-                NOT FOUND
-            </h2>
-
+       <Link to={'/'}><button className=" btn text-white absolute top-3/4 btn-outline border-b border-orange-400">Go Home</button></Link>
         </div>
     );
 };

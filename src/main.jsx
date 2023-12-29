@@ -12,6 +12,8 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
 import AuthProvider from "./Provider/AuthProvider";
 import PrivetRoute from "./PrivetRoute/PrivetRoute";
+import Contact from "./Components/Contact/Contact";
+import { Toaster } from "react-hot-toast";
 
 const url =
   "https://my-json-server.typicode.com/faarhaan10/react-sunglasses/sunglasses";
@@ -46,6 +48,10 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
+        path: "contact",
+        element: <Contact></Contact>,
+      },
+      {
         path: "login",
         element: <Login />,
       },
@@ -62,5 +68,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
+    <Toaster />
   </React.StrictMode>
 );
